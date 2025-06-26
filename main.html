@@ -1,16 +1,48 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meditation App</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+    <div id="app">
+        <div class="vid-container">
+            <video class="video-player" loop autoplay muted></video>
+        </div>
 
+        <div class="player-container">
+            <audio class="sound-player" loop></audio>
+
+            <div class="time-select" id="time-select">
+                <button class="time-button" id="smaller-mins" data-time="120">2 Minutes</button>
+                <button class="time-button" id="medium-mins" data-time="300">5 Minutes</button>
+                <button class="time-button" id="long-mins" data-time="600">10 Minutes</button>
+            </div>
+
+            <div class="play">
+                <img src="" alt="play/pause button" class="play-icon">
+                <svg class="track-outline" width="450" height="450" viewBox="0 0 450 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="225" cy="225" r="215" stroke="white" stroke-width="20"/>
+                </svg>
+                <svg class="moving-outline" width="450" height="450" viewBox="0 0 450 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="225" cy="225" r="215" stroke="#00d1d1" stroke-width="20" stroke-dasharray="1350" stroke-dashoffset="1350"/>
+                </svg>
+                <h1 class="time-display">10:00</h1>
+            </div>
+            
+            <div class="sound-picker">
+                <button class="sound-button" data-sound="Sounds/rain.mp3" data-video="Sounds/rain.mp4">
+                    <img src="https://i.ibb.co/L5k6Mv7/rain-cloud.png" alt="Rain Sound">
+                </button>
+                <button class="sound-button" data-sound="Sounds/beach.mp3" data-video="Sounds/beach.mp4">
+                    <img src="https://i.ibb.co/XF33B6C/sun.png" alt="Beach Sound">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
-
 </html>
